@@ -63,6 +63,6 @@ body {
 
 /* Section styling */
 .section {
-  padding: 60px
-::contentReference[oaicite:0]{index=0}
- 
+  padding: 60px; /* Added missing semicolon */
+}
+
