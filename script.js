@@ -1,24 +1,45 @@
-/* script.js */
+// Enhanced script.js
+document.addEventListener("DOMContentLoaded", function() {
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px"
+  };
 
-// Wait for the DOM to load before running scripts
-document.addEventListener("DOMContentLoaded", function () {
-  // Select all internal anchor links (links starting with '#')
-  const links = document.querySelectorAll('a[href^="#"]');
-  
-  // Add click event listener to each link for smooth scrolling
-  links.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault(); // Prevent the default jump behavior
-      const targetId = this.getAttribute("href").substring(1);
-      const targetElement = document.getElementById(targetId);
-      
-      if (targetElement) {
-        // Smoothly scroll to the target element
-        targetElement.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
       }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+  });
+
+  // Header scroll effect
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.sticky-header');
+    if (window.scrollY > 100) {
+      header.style.transform = 'translateY(-10px)';
+      header.style.opacity = '0.9';
+    } else {
+      header.style.transform = 'translateY(0)';
+      header.style.opacity = '1';
+    }
+  });
+
+  // Smooth scroll enhancement
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     });
   });
 });
