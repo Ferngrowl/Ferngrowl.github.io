@@ -22,11 +22,16 @@
         <div class="container navigation-container">
             <a href="#" class="logo">H.SUTTON</a>
             <ul class="navigation-links">
+                <li><a href="#about" class="navigation-link">About</a></li>
                 <li><a href="#projects" class="navigation-link">Projects</a></li>
                 <li><a href="#skills" class="navigation-link">Skills</a></li>
                 <li><a href="#experience" class="navigation-link">Experience</a></li>
+                <li><a href="#education" class="navigation-link">Education</a></li>
                 <li><a href="#contact" class="navigation-link">Contact</a></li>
             </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -34,20 +39,31 @@
     <section class="hero-section">
         <div class="container">
             <h1 class="hero-title">Harvey Sutton</h1>
-            <p class="hero-description">Full-Stack Developer specializing in immersive web experiences</p>
+            <p class="hero-description">Software Developer specializing in game development, cybersecurity, and full-stack web applications</p>
             <ul class="project-tags-container" style="justify-content: center;">
-                <li class="project-tag">WebGL</li>
+                <li class="project-tag">Unity</li>
                 <li class="project-tag">Game Development</li>
                 <li class="project-tag">React</li>
                 <li class="project-tag">Node.js</li>
+                <li class="project-tag">Cybersecurity</li>
             </ul>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section">
+        <div class="container">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="about-content">
+                <p>Innovative Computer Science graduate specializing in game development, cybersecurity, and full-stack web applications. Proven expertise in rapid prototyping, modular coding, and agile project management. Combines technical proficiency in Unity, Python, and MERN stack with a passion for creating immersive, educational experiences.</p>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section section">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="project-carousel-wrapper">
                 <div class="project-carousel">
                     <!-- Polterheist Project -->
@@ -55,7 +71,7 @@
                         <div class="game-embed-container">
                             <iframe 
                                 class="game-embed-iframe"
-                                src="https://itch.io/embed/3258807?bg_color=1a1a1a&amp;fg_color=ffffff&amp;link_color=00b894"
+                                src="https://itch.io/embed/3258807?"
                                 title="Polterheist Game Embed"
                             >
                                 <a href="https://ferngrowl.itch.io/polterheist">Polterheist by Ferngrowl</a>
@@ -63,11 +79,16 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Polterheist</h3>
-                            <p class="hero-description">Ghost puzzle adventure game with possession mechanics</p>
+                            <p class="project-description">Ghost puzzle adventure game with possession mechanics</p>
+                            <div class="project-details">
+                                <p><strong>Role:</strong> Solo Developer</p>
+                                <p><strong>Context:</strong> Pirate Software Game Jam 2025</p>
+                                <p>Designed a browser-based puzzle game with a possession mechanic. Built using Unity with modular code, dynamic audio, and polished pixel art.</p>
+                            </div>
                             <ul class="project-tags-container">
-                                <li class="project-tag">WebGL</li>
+                                <li class="project-tag">Unity</li>
                                 <li class="project-tag">Puzzle</li>
-                                <li class="project-tag">Three.js</li>
+                                <li class="project-tag">C#</li>
                             </ul>
                         </div>
                     </article>
@@ -77,7 +98,7 @@
                         <div class="game-embed-container">
                             <iframe
                                 class="game-embed-iframe"
-                                src="https://itch.io/embed/3335073?bg_color=1a1a1a&amp;fg_color=ffffff&amp;link_color=00b894"
+                                src="https://itch.io/embed/3335073?"
                                 title="Hello World Game Embed"
                             >
                                 <a href="https://ferngrowl.itch.io/hello-world">Hello World by Ferngrowl</a>
@@ -85,33 +106,42 @@
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Hello World</h3>
-                            <p class="hero-description">Experimental WebGL experience exploring primitive shapes</p>
+                            <p class="project-description">Educational CLI simulator for programming and cybersecurity</p>
+                            <div class="project-details">
+                                <p><strong>Role:</strong> Lead Developer & Researcher</p>
+                                <p><strong>Context:</strong> Final Year Project</p>
+                                <p>Created a Unity-based CLI simulator to teach programming and cybersecurity concepts. Conducted playtests using the PXI model, demonstrating improvement in user comprehension.</p>
+                            </div>
                             <ul class="project-tags-container">
-                                <li class="project-tag">WebGL</li>
-                                <li class="project-tag">Experimental</li>
-                                <li class="project-tag">Creative Coding</li>
+                                <li class="project-tag">Unity</li>
+                                <li class="project-tag">Educational</li>
+                                <li class="project-tag">Cybersecurity</li>
                             </ul>
                         </div>
                     </article>
 
-                    <!-- Platformer Project -->
+                    <!-- HelpInNeed Project -->
                     <article class="project-card">
                         <div class="game-embed-container">
                             <iframe
                                 class="game-embed-iframe"
-                                src="https://itch.io/embed/3301628?bg_color=1a1a1a&amp;fg_color=ffffff&amp;link_color=00b894"
-                                title="Platformer Game Embed"
+                                title="HelpInNeed Project"
                             >
-                                <a href="https://ferngrowl.itch.io/platformer">Platformer by Ferngrowl</a>
+                                <a href="https://ferngrowl.itch.io/platformer">HelpInNeed by Ferngrowl</a>
                             </iframe>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">2D Platformer</h3>
-                            <p class="hero-description">Classic platforming mechanics with modern controls</p>
+                            <h3 class="project-title">HelpInNeed</h3>
+                            <p class="project-description">Mental Health Tracker Web Application</p>
+                            <div class="project-details">
+                                <p><strong>Role:</strong> Full-Stack Developer & Scrum Master</p>
+                                <p><strong>Context:</strong> University Group Project</p>
+                                <p>Led a 5-member team to build a MERN stack app for UN SDG 3 (Good Health). Implemented goal-tracking features, integrating React frontend with MongoDB backend.</p>
+                            </div>
                             <ul class="project-tags-container">
-                                <li class="project-tag">2D</li>
-                                <li class="project-tag">Platformer</li>
-                                <li class="project-tag">JavaScript</li>
+                                <li class="project-tag">MERN</li>
+                                <li class="project-tag">React</li>
+                                <li class="project-tag">MongoDB</li>
                             </ul>
                         </div>
                     </article>
@@ -128,10 +158,13 @@
                 <div class="skill-category">
                     <h3 class="skill-category-title">Programming Languages</h3>
                     <ul>
-                        <li>C# (Expert)</li>
-                        <li>Java (Gold Certification)</li>
+                        <li>C#</li>
                         <li>Python</li>
-                        <li>JavaScript/TypeScript</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>C++</li>
+                        <li>HTML/CSS</li>
+                        <li>SQL</li>
                     </ul>
                 </div>
 
@@ -142,6 +175,7 @@
                         <li>Procedural Generation</li>
                         <li>AI Pathfinding</li>
                         <li>Physics Simulation</li>
+                        <li>Pixel Art (Aseprite)</li>
                     </ul>
                 </div>
 
@@ -152,6 +186,17 @@
                         <li>REST APIs</li>
                         <li>PostgreSQL</li>
                         <li>Authentication Systems</li>
+                        <li>CI/CD Pipelines</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Additional Skills</h3>
+                    <ul>
+                        <li>Agile/Scrum Methodology</li>
+                        <li>Git Version Control</li>
+                        <li>Cybersecurity (MITRE ATT&CK)</li>
+                        <li>Wireshark</li>
                     </ul>
                 </div>
             </div>
@@ -164,21 +209,47 @@
             <h2 class="section-title">Professional Experience</h2>
             <div class="experience-grid">
                 <div class="experience-card">
-                    <h3 class="project-title">Game Development</h3>
+                    <div class="experience-header">
+                        <h3 class="experience-title">Sales Assistant (Watch Advisor)</h3>
+                        <p class="experience-meta">F.Hinds | December 2018 – December 2024</p>
+                    </div>
                     <ul>
-                        <li>5+ completed game projects</li>
-                        <li>Game jam participation</li>
-                        <li>Modular system design</li>
+                        <li>Managed high-value transactions and customer data with a focus on security and precision.</li>
+                        <li>Trained in specialized sales techniques, achieving consistent top performance in team metrics.</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="experience-card">
-                    <h3 class="project-title">Full-Stack Development</h3>
-                    <ul>
-                        <li>HelpInNeed mental health platform</li>
-                        <li>Agile/Scrum methodology</li>
-                        <li>CI/CD pipelines</li>
-                    </ul>
+    <!-- Education Section -->
+    <section id="education" class="education-section section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <div class="education-header">
+                    <h3 class="education-title">BSc Computer Science (Digital Media and Games)</h3>
+                    <p class="education-meta">Brunel University London | September 2021 – June 2024</p>
+                    <p class="education-degree">2.1 Second Class Honours (Upper Division)</p>
+                </div>
+                <div class="education-details">
+                    <p><strong>Thesis:</strong> <em>The Value of Education in Video Games</em> – Developed <em>Hello World</em>, a hacking-themed educational game, and conducted playtests with 10 participants to measure efficacy.</p>
+                    <p><strong>Specializations:</strong> Cybersecurity, AI, Digital Media and Games.</p>
+                    <p><strong>Key Projects:</strong> Led agile group projects, including a mental health tracking web app (MERN stack) and an in-flight restaurant system (Java Swing).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section section">
+        <div class="container">
+            <h2 class="section-title">Certifications & Achievements</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <i class="fas fa-award certification-icon"></i>
+                    <h3 class="certification-title">HackerRank</h3>
+                    <p>Java (Gold), C++ (Bronze)</p>
                 </div>
             </div>
         </div>
@@ -189,14 +260,18 @@
         <div class="container">
             <h2 class="section-title">Get in Touch</h2>
             <ul class="social-links-container">
-                <li><a href="https://github.com/Ferngrowl" class="social-link"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="social-link"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://ferngrowl.itch.io/" class="social-link"><i class="fas fa-gamepad"></i></a></li>
+                <li><a href="https://github.com/Ferngrowl" class="social-link" aria-label="GitHub Profile"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://ferngrowl.itch.io/" class="social-link" aria-label="Itch.io Profile"><i class="fas fa-gamepad"></i></a></li>
             </ul>
-            <p class="hero-description contact-info">
-                Currently open to opportunities in Helsinki and remote positions<br>
-                📧 harveysutton09@gmail.com | 📱 +44 7592 509555
+            <p class="contact-info">
+                Currently open to opportunities in Finland, England and remote positions<br>
+                <i class="fas fa-envelope"></i> harveysutton09@gmail.com
             </p>
+            <div class="interests">
+                <h3>Interests</h3>
+                <p>Generative AI, 3D Modeling, Game Design, Blockchain</p>
+            </div>
         </div>
     </section>
 
