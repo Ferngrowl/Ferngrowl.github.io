@@ -14,371 +14,7 @@
     <!-- External Resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    <!-- Internal Styles -->
-    <style>
-        /* CSS Variables for Theme Management */
-        :root {
-            --primary-color: #2D3436;
-            --secondary-color: #0984E3;
-            --accent-color: #00B894;
-            --light-background-color: #F5F6FA;
-            --dark-background-color: #1a1a1a;
-            --text-color: #2D3436;
-            --transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            --border-radius: 8px;
-        }
-
-        /* Base Styles */
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-background-color);
-            margin: 0;
-            overflow-x: hidden;
-        }
-
-        /* Container for Content Centering */
-        .container {
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-
-        /* Navigation Styles */
-        .navigation-bar {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navigation-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .navigation-links {
-            display: flex;
-            gap: 2rem;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navigation-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            position: relative;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-        }
-
-        .navigation-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--secondary-color);
-            transition-property: width;
-            transition-duration: 0.3s;
-            transition-timing-function: var(--transition-timing-function);
-        }
-
-        .navigation-link:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            padding-top: 160px;
-            padding-bottom: 100px;
-            text-align: center;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .hero-description {
-            font-size: 1.25rem;
-            color: #636E72;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 2rem;
-        }
-
-        /* Projects Section */
-        .projects-section {
-            padding-top: 100px;
-            padding-bottom: 100px;
-            overflow-x: hidden;
-        }
-
-        .project-carousel-wrapper {
-            position: relative;
-            margin-top: 3rem;
-        }
-
-        .project-carousel {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x proximity;
-            scroll-behavior: smooth;
-            padding-bottom: 2rem;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            cursor: grab;
-            user-select: none;
-        }
-
-        .project-carousel::-webkit-scrollbar {
-            display: none;
-        }
-
-        .project-carousel::before,
-        .project-carousel::after {
-            content: '';
-            flex: 0 0 calc((100% - 1200px)/2);
-            min-width: 1rem;
-        }
-
-        .project-card {
-            flex: 0 0 auto;
-            width: 80vw;
-            min-width: 300px;
-            max-width: 600px;
-            margin-right: 2rem;
-            scroll-snap-align: center;
-            scroll-snap-stop: normal;
-            background-color: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition-property: transform;
-            transition-duration: 0.3s;
-            transition-timing-function: var(--transition-timing-function);
-        }
-
-        .project-card:last-child {
-            margin-right: 0;
-        }
-
-        .project-carousel.dragging {
-            cursor: grabbing;
-            scroll-snap-type: none;
-            scroll-behavior: auto;
-        }
-
-        @media screen and (max-width: 768px) {
-            .project-card {
-                width: 85vw;
-                min-width: 280px;
-            }
-        }
-
-        /* Game Embed Container */
-        .game-embed-container {
-            position: relative;
-            width: 100%;
-            padding-top: 30.25%;
-            background-color: var(--dark-background-color);
-        }
-
-        .game-embed-iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Project Content Styling */
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-title {
-            margin-top: 0;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .project-tags-container {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            padding-left: 0;
-            list-style-type: none;
-        }
-
-        .project-tag {
-            background-color: var(--light-background-color);
-            color: var(--secondary-color);
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* Skills Section */
-        .skills-section {
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .skill-category {
-            background-color: white;
-            padding: 1.5rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-        }
-
-        .skill-category-title {
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
-
-        /* Experience Section */
-        .experience-section {
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-
-        .experience-grid {
-            display: grid;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .experience-card {
-            background-color: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding-top: 100px;
-            padding-bottom: 100px;
-            background-color: white;
-        }
-
-        .social-links-container {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 2rem;
-            padding-left: 0;
-            list-style-type: none;
-        }
-
-        .social-link {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            transition-property: color;
-            transition-duration: 0.3s;
-            transition-timing-function: var(--transition-timing-function);
-        }
-
-        .social-link:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .navigation-links {
-                display: none;
-            }
-
-            .game-embed-container {
-                padding-top: 45%;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .game-embed-container {
-                padding-top: 60%;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .project-card {
-            animation-name: fadeInUp;
-            animation-duration: 0.6s;
-            animation-timing-function: var(--transition-timing-function);
-            animation-fill-mode: forwards;
-            opacity: 0;
-        }
-
-        .project-card:nth-child(1) {
-            animation-delay: 0.2s;
-        }
-
-        .project-card:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-
-        .project-card:nth-child(3) {
-            animation-delay: 0.6s;
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -409,14 +45,11 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section section">
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="project-carousel-wrapper">
                 <div class="project-carousel">
-                    <!-- Padding pseudo-element -->
-                    <div class="carousel-padding"></div>
-                    
                     <!-- Polterheist Project -->
                     <article class="project-card">
                         <div class="game-embed-container">
@@ -482,207 +115,15 @@
                             </ul>
                         </div>
                     </article>
-
-                    <!-- Padding pseudo-element -->
-                    <div class="carousel-padding"></div>
                 </div>
             </div>
         </div>
     </section>
-
-    <script>
-      // Carousel Drag-to-Scroll Implementation
-      const carouselElement = document.querySelector('.project-carousel');
-      let isDraggingCarousel = false;
-      let initialPositionX = 0;
-      let initialScrollLeftPosition = 0;
-      const dragSensitivityMultiplier = 1.2;
-      const maximumMomentumDecay = 0.95;
-      const minimumMomentumThreshold = 2;
-      let momentumAnimationFrame = null;
-  
-      // Mouse Event Handlers
-      const handleCarouselMouseDown = function(mouseEvent) {
-          isDraggingCarousel = true;
-          carouselElement.classList.add('dragging');
-          initialPositionX = mouseEvent.pageX - carouselElement.offsetLeft;
-          initialScrollLeftPosition = carouselElement.scrollLeft;
-          cancelMomentumTracking();
-      };
-  
-      const handleCarouselMouseMove = function(mouseEvent) {
-          if (!isDraggingCarousel) return;
-          mouseEvent.preventDefault();
-          
-          const currentPositionX = mouseEvent.pageX - carouselElement.offsetLeft;
-          const positionDeltaX = (currentPositionX - initialPositionX) * dragSensitivityMultiplier;
-          const newScrollPosition = initialScrollLeftPosition - positionDeltaX;
-          
-          carouselElement.scrollLeft = newScrollPosition;
-          applyRubberBandPhysics();
-          updateScrollProgressIndicator();
-      };
-  
-      const handleCarouselMouseUp = function() {
-          isDraggingCarousel = false;
-          carouselElement.classList.remove('dragging');
-          initiateMomentumTracking();
-          smoothSnapToNearestCard();
-      };
-  
-      // Touch Event Handlers
-      const handleCarouselTouchStart = function(touchEvent) {
-          isDraggingCarousel = true;
-          carouselElement.classList.add('dragging');
-          initialPositionX = touchEvent.touches[0].pageX - carouselElement.offsetLeft;
-          initialScrollLeftPosition = carouselElement.scrollLeft;
-          cancelMomentumTracking();
-      };
-  
-      const handleCarouselTouchMove = function(touchEvent) {
-          if (!isDraggingCarousel) return;
-          touchEvent.preventDefault();
-          
-          const currentPositionX = touchEvent.touches[0].pageX - carouselElement.offsetLeft;
-          const positionDeltaX = (currentPositionX - initialPositionX) * dragSensitivityMultiplier;
-          const newScrollPosition = initialScrollLeftPosition - positionDeltaX;
-          
-          carouselElement.scrollLeft = newScrollPosition;
-          applyRubberBandPhysics();
-          updateScrollProgressIndicator();
-      };
-  
-      const handleCarouselTouchEnd = function() {
-          isDraggingCarousel = false;
-          carouselElement.classList.remove('dragging');
-          initiateMomentumTracking();
-          smoothSnapToNearestCard();
-      };
-  
-      // Physics-Based Momentum Implementation
-      let velocity = 0;
-      let lastPosition = 0;
-      let lastTime = Date.now();
-  
-      const trackMomentum = function() {
-          const currentTime = Date.now();
-          const timeDelta = currentTime - lastTime;
-          
-          if (timeDelta > 0) {
-              const currentScrollPosition = carouselElement.scrollLeft;
-              const positionDelta = currentScrollPosition - lastPosition;
-              velocity = positionDelta / timeDelta;
-              lastPosition = currentScrollPosition;
-              lastTime = currentTime;
-          }
-          
-          momentumAnimationFrame = requestAnimationFrame(trackMomentum);
-      };
-  
-      const applyMomentum = function() {
-          if (Math.abs(velocity) < minimumMomentumThreshold) return;
-          
-          carouselElement.scrollLeft += velocity * 15;
-          velocity *= maximumMomentumDecay;
-          
-          if (Math.abs(velocity) > 0.5) {
-              requestAnimationFrame(applyMomentum);
-          }
-      };
-  
-      const initiateMomentumTracking = function() {
-          lastTime = Date.now();
-          lastPosition = carouselElement.scrollLeft;
-          momentumAnimationFrame = requestAnimationFrame(trackMomentum);
-          setTimeout(applyMomentum, 10);
-      };
-  
-      const cancelMomentumTracking = function() {
-          cancelAnimationFrame(momentumAnimationFrame);
-          velocity = 0;
-      };
-  
-      // Scroll Progress Indicator
-      const updateScrollProgressIndicator = function() {
-          const progressElement = document.querySelector('.scroll-progress-thumb');
-          const scrollableWidth = carouselElement.scrollWidth - carouselElement.clientWidth;
-          const currentScrollPosition = carouselElement.scrollLeft;
-          
-          if (scrollableWidth > 0) {
-              const progressPercentage = (currentScrollPosition / scrollableWidth) * 100;
-              progressElement.style.transform = `translateX(${progressPercentage}%)`;
-          }
-      };
-  
-      // Rubber Band Scroll Effect
-      const applyRubberBandPhysics = function() {
-          const maximumScroll = carouselElement.scrollWidth - carouselElement.clientWidth;
-          const currentScroll = carouselElement.scrollLeft;
-          const resistanceFactor = 0.3;
-  
-          if (currentScroll < 0) {
-              carouselElement.scrollLeft = currentScroll * resistanceFactor;
-          } else if (currentScroll > maximumScroll) {
-              carouselElement.scrollLeft = maximumScroll + (currentScroll - maximumScroll) * resistanceFactor;
-          }
-      };
-  
-      // Precision Snap Functionality
-      const smoothSnapToNearestCard = function() {
-          const cardElements = Array.from(carouselElement.children).filter(
-              element => element.classList.contains('project-card')
-          );
-          
-          const carouselCenterPosition = carouselElement.scrollLeft + (carouselElement.offsetWidth / 2);
-          const carouselRect = carouselElement.getBoundingClientRect();
-  
-          let closestCard = cardElements.reduce((closest, card) => {
-              const cardRect = card.getBoundingClientRect();
-              const cardCenter = cardRect.left + cardRect.width/2 - carouselRect.left;
-              const distanceFromCenter = Math.abs(carouselCenterPosition - cardCenter);
-              
-              return distanceFromCenter < closest.distance ? 
-                  { distance: distanceFromCenter, element: card } : 
-                  closest;
-          }, { distance: Infinity, element: cardElements[0] });
-  
-          const targetScrollPosition = closestCard.element.offsetLeft - 
-              (carouselElement.offsetWidth/2 - closestCard.element.offsetWidth/2);
-  
-          carouselElement.scrollTo({
-              left: targetScrollPosition,
-              behavior: 'smooth'
-          });
-      };
-  
-      // Event Listener Setup
-      carouselElement.addEventListener('mousedown', handleCarouselMouseDown);
-      carouselElement.addEventListener('mousemove', handleCarouselMouseMove);
-      carouselElement.addEventListener('mouseup', handleCarouselMouseUp);
-      carouselElement.addEventListener('mouseleave', handleCarouselMouseUp);
-      
-      carouselElement.addEventListener('touchstart', handleCarouselTouchStart);
-      carouselElement.addEventListener('touchmove', handleCarouselTouchMove);
-      carouselElement.addEventListener('touchend', handleCarouselTouchEnd);
-      carouselElement.addEventListener('touchcancel', handleCarouselTouchEnd);
-  
-      // Scroll Progress Initialization
-      carouselElement.addEventListener('scroll', updateScrollProgressIndicator);
-  
-      // Window Blur Safety
-      window.addEventListener('blur', () => {
-          if (isDraggingCarousel) {
-              isDraggingCarousel = false;
-              carouselElement.classList.remove('dragging');
-              cancelMomentumTracking();
-          }
-      });
-    </script>
     
     <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <section id="skills" class="skills-section section">
         <div class="container">
-            <h2 class="hero-title">Technical Expertise</h2>
+            <h2 class="section-title">Technical Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3 class="skill-category-title">Programming Languages</h3>
@@ -718,9 +159,9 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience-section">
+    <section id="experience" class="experience-section section">
         <div class="container">
-            <h2 class="hero-title">Professional Experience</h2>
+            <h2 class="section-title">Professional Experience</h2>
             <div class="experience-grid">
                 <div class="experience-card">
                     <h3 class="project-title">Game Development</h3>
@@ -744,19 +185,22 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section section">
         <div class="container">
-            <h2 class="hero-title">Get in Touch</h2>
+            <h2 class="section-title">Get in Touch</h2>
             <ul class="social-links-container">
                 <li><a href="https://github.com/Ferngrowl" class="social-link"><i class="fab fa-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="social-link"><i class="fab fa-linkedin"></i></a></li>
                 <li><a href="https://ferngrowl.itch.io/" class="social-link"><i class="fas fa-gamepad"></i></a></li>
             </ul>
-            <p class="hero-description" style="text-align: center; margin-top: 1rem;">
+            <p class="hero-description contact-info">
                 Currently open to opportunities in Helsinki and remote positions<br>
                 📧 harveysutton09@gmail.com | 📱 +44 7592 509555
             </p>
         </div>
     </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

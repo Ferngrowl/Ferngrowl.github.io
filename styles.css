@@ -1,0 +1,343 @@
+/* CSS Variables for Theme Management */
+:root {
+    --primary-color: #2D3436;
+    --secondary-color: #0984E3;
+    --accent-color: #00B894;
+    --light-background: #F5F6FA;
+    --dark-background: #1a1a1a;
+    --text-color: #2D3436;
+    --text-secondary: #636E72;
+    --transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-background);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.section-title,
+.hero-title {
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Section Spacing */
+section {
+    padding: 100px 0;
+}
+
+.hero-section {
+    padding-top: 160px;
+    text-align: center;
+}
+
+/* Navigation */
+.navigation-bar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.navigation-links {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.navigation-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s var(--transition);
+}
+
+.navigation-link:hover::after {
+    width: 100%;
+}
+
+/* Project Carousel */
+.project-carousel-wrapper {
+    position: relative;
+    margin-top: 3rem;
+}
+
+.project-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+    padding-bottom: 2rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    cursor: grab;
+    user-select: none;
+}
+
+.project-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.project-carousel.dragging {
+    cursor: grabbing;
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+/* Project Cards */
+.project-card {
+    flex: 0 0 auto;
+    width: 80vw;
+    min-width: 300px;
+    max-width: 600px;
+    margin-right: 2rem;
+    scroll-snap-align: center;
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s var(--transition);
+    animation: fadeInUp 0.6s var(--transition) forwards;
+    opacity: 0;
+}
+
+.project-card:last-child {
+    margin-right: 0;
+}
+
+.project-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Game Embed */
+.game-embed-container {
+    position: relative;
+    width: 100%;
+    padding-top: 30.25%;
+    background-color: var(--dark-background);
+}
+
+.game-embed-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Project Content */
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.project-tags-container {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.project-tag {
+    background-color: var(--light-background);
+    color: var(--secondary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.skill-category {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.skill-category-title {
+    margin-bottom: 1rem;
+}
+
+/* Experience Section */
+.experience-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.experience-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: white;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.social-links-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.social-link {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: color 0.3s var(--transition);
+}
+
+.social-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    opacity: 0;
+}
+
+.section.fade-in {
+    animation: fadeInUp 0.6s var(--transition) forwards;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .navigation-links {
+        display: none;
+    }
+
+    .game-embed-container {
+        padding-top: 45%;
+    }
+    
+    .project-card {
+        width: 85vw;
+        min-width: 280px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game-embed-container {
+        padding-top: 60%;
+    }
+}
