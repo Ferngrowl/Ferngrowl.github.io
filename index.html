@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Harvey Sutton - Software Developer specializing in game and web development">
-    <meta name="keywords" content="Software Development, Game Development, Web Development, Portfolio">
-    <meta name="author" content="Harvey Sutton">
-    
-    <!-- Page Title -->
+    <meta name="description" content="Harvey Sutton - Software Developer specializing in game development and web applications">
     <title>Harvey Sutton | Software Developer</title>
-    
-    <!-- External Resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navigation-bar">
+    <button class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+          <path d="M18 15l-6-6-6 6"></path>
+        </svg>
+    </button>
+    
+    <nav class="navigation-bar" aria-label="Main navigation">
         <div class="container navigation-container">
             <a href="#" class="logo">H.SUTTON</a>
             <ul class="navigation-links">
@@ -26,36 +27,47 @@
                 <li><a href="#projects" class="navigation-link">Projects</a></li>
                 <li><a href="#skills" class="navigation-link">Skills</a></li>
                 <li><a href="#experience" class="navigation-link">Experience</a></li>
-                <li><a href="#education" class="navigation-link">Education</a></li>
                 <li><a href="#contact" class="navigation-link">Contact</a></li>
             </ul>
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
+            
+            <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                <span class="icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                  </svg>
+                </span>
             </button>
         </div>
     </nav>
-
+    
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container">
-            <h1 class="hero-title">Harvey Sutton</h1>
-            <p class="hero-description">Software Developer specializing in game development, cybersecurity, and full-stack web applications</p>
-            <ul class="project-tags-container" style="justify-content: center;">
-                <li class="project-tag">Unity</li>
-                <li class="project-tag">Game Development</li>
-                <li class="project-tag">React</li>
-                <li class="project-tag">Node.js</li>
-                <li class="project-tag">Cybersecurity</li>
-            </ul>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Harvey Sutton</h1>
+                <p class="hero-subtitle">Software Developer | Game Development | Cybersecurity | Web Applications</p>
+                <p class="hero-description">Passionate about creating innovative and engaging software solutions.</p>
+                <div class="skill-badges">
+                    <span class="skill-badge">Unity</span>
+                    <span class="skill-badge">C#</span>
+                    <span class="skill-badge">React</span>
+                    <span class="skill-badge">Node.js</span>
+                    <span class="skill-badge">Cybersecurity</span>
+                    <span class="skill-badge">Python</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section section">
         <div class="container">
-            <h2 class="section-title">Professional Summary</h2>
-            <div class="about-content">
-                <p>Innovative Computer Science graduate specializing in game development, cybersecurity, and full-stack web applications. Proven expertise in rapid prototyping, modular coding, and agile project management. Combines technical proficiency in Unity, Python, and MERN stack with a passion for creating immersive, educational experiences.</p>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container">
+                <div class="about-content">
+                    <p>I am a Computer Science graduate with a passion for software development, specializing in game development, cybersecurity, and full-stack web applications.  My skills include rapid prototyping, modular coding, and agile project management.  I am driven to create immersive, educational, and secure digital experiences.</p>
+                    <p> I am highly proficient in Unity, Python, and MERN stack. I enjoy exploring new technologies and contributing to open-source projects.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -63,89 +75,105 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="project-carousel-wrapper">
                 <div class="project-carousel">
                     <!-- Polterheist Project -->
-                    <article class="project-card">
-                        <div class="game-embed-container">
-                            <iframe 
-                                class="game-embed-iframe"
-                                src="https://itch.io/embed/3258807?"
-                                title="Polterheist Game Embed"
+                    <div class="project-card">
+                        <div class="project-card-image">
+                            <iframe
+                                    class="game-embed-iframe"
+                                    src="https://itch.io/embed/3258807?"
+                                    title="Polterheist Game Embed"
+                                    loading="lazy"
                             >
                                 <a href="https://ferngrowl.itch.io/polterheist">Polterheist by Ferngrowl</a>
                             </iframe>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Polterheist</h3>
-                            <p class="project-description">Ghost puzzle adventure game with possession mechanics</p>
-                            <div class="project-details">
-                                <p><strong>Role:</strong> Solo Developer</p>
-                                <p><strong>Context:</strong> Pirate Software Game Jam 2025</p>
-                                <p>Designed a browser-based puzzle game with a possession mechanic. Built using Unity with modular code, dynamic audio, and polished pixel art.</p>
+                        <div class="project-card-content">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Polterheist</h3>
+                                <p class="project-card-subtitle">Ghost puzzle adventure game with possession mechanics</p>
                             </div>
-                            <ul class="project-tags-container">
-                                <li class="project-tag">Unity</li>
-                                <li class="project-tag">Puzzle</li>
-                                <li class="project-tag">C#</li>
-                            </ul>
+                            <p class="project-card-description">Designed a browser-based puzzle game with a possession mechanic for the Pirate Software Game Jam 2025. Built using Unity with modular code, dynamic audio, and polished pixel art.</p>
+                            <div class="project-card-meta">
+                                <span>Role: Solo Developer</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">Puzzle</span>
+                                <span class="tag">C#</span>
+                            </div>
                         </div>
-                    </article>
+                    </div>
 
                     <!-- Hello World Project -->
-                    <article class="project-card">
-                        <div class="game-embed-container">
+                    <div class="project-card">
+                        <div class="project-card-image">
                             <iframe
-                                class="game-embed-iframe"
-                                src="https://itch.io/embed/3335073?"
-                                title="Hello World Game Embed"
+                                    class="game-embed-iframe"
+                                    src="https://itch.io/embed/3335073?"
+                                    title="Hello World Game Embed"
                             >
                                 <a href="https://ferngrowl.itch.io/hello-world">Hello World by Ferngrowl</a>
                             </iframe>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Hello World</h3>
-                            <p class="project-description">Educational CLI simulator for programming and cybersecurity</p>
-                            <div class="project-details">
-                                <p><strong>Role:</strong> Lead Developer & Researcher</p>
-                                <p><strong>Context:</strong> Final Year Project</p>
-                                <p>Created a Unity-based CLI simulator to teach programming and cybersecurity concepts. Conducted playtests using the PXI model, demonstrating improvement in user comprehension.</p>
+                        <div class="project-card-content">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">Hello World</h3>
+                                <p class="project-card-subtitle">Educational CLI simulator for programming and cybersecurity</p>
                             </div>
-                            <ul class="project-tags-container">
-                                <li class="project-tag">Unity</li>
-                                <li class="project-tag">Educational</li>
-                                <li class="project-tag">Cybersecurity</li>
-                            </ul>
+                            <p class="project-card-description">Created a Unity-based CLI simulator to teach programming and cybersecurity concepts for my final year project. Conducted playtests using the PXI model, demonstrating improvement in user comprehension.</p>
+                            <div class="project-card-meta">
+                                <span>Role: Lead Developer & Researcher</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">Unity</span>
+                                <span class="tag">Educational</span>
+                                <span class="tag">Cybersecurity</span>
+                            </div>
                         </div>
-                    </article>
+                    </div>
 
                     <!-- HelpInNeed Project -->
-                    <article class="project-card">
-                        <div class="game-embed-container">
+                    <div class="project-card">
+                        <div class="project-card-image">
                             <iframe
-                                class="game-embed-iframe"
-                                title="HelpInNeed Project"
+                                    class="game-embed-iframe"
+                                    title="HelpInNeed Project"
                             >
                                 <a href="https://ferngrowl.itch.io/platformer">HelpInNeed by Ferngrowl</a>
                             </iframe>
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">HelpInNeed</h3>
-                            <p class="project-description">Mental Health Tracker Web Application</p>
-                            <div class="project-details">
-                                <p><strong>Role:</strong> Full-Stack Developer & Scrum Master</p>
-                                <p><strong>Context:</strong> University Group Project</p>
-                                <p>Led a 5-member team to build a MERN stack app for UN SDG 3 (Good Health). Implemented goal-tracking features, integrating React frontend with MongoDB backend.</p>
+                        <div class="project-card-content">
+                            <div class="project-card-header">
+                                <h3 class="project-card-title">HelpInNeed</h3>
+                                <p class="project-card-subtitle">Mental Health Tracker Web Application</p>
                             </div>
-                            <ul class="project-tags-container">
-                                <li class="project-tag">MERN</li>
-                                <li class="project-tag">React</li>
-                                <li class="project-tag">MongoDB</li>
-                            </ul>
+                            <p class="project-card-description">Led a 5-member team to build a MERN stack app for UN SDG 3 (Good Health) as a university group project. Implemented goal-tracking features, integrating React frontend with MongoDB backend.</p>
+                            <div class="project-card-meta">
+                                <span>Role: Full-Stack Developer & Scrum Master</span>
+                            </div>
+                            <div class="tags">
+                                <span class="tag">MERN</span>
+                                <span class="tag">React</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
                         </div>
-                    </article>
+                    </div>
                 </div>
+            </div>
+            <div class="carousel-navigation">
+                <button class="carousel-button carousel-prev" aria-label="Previous Project">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+                    <path d="M15 18l-6-6 6-6"></path>
+                  </svg>
+                </button>
+                <button class="carousel-button carousel-next" aria-label="Next Project">
+                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+                    <path d="M9 18l6-6-6-6"></path>
+                  </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -153,51 +181,51 @@
     <!-- Skills Section -->
     <section id="skills" class="skills-section section">
         <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-grid">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
                 <div class="skill-category">
                     <h3 class="skill-category-title">Programming Languages</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>C++</li>
-                        <li>HTML/CSS</li>
-                        <li>SQL</li>
-                    </ul>
+                    <div class="skill-item-container">
+                        <div class="skill-item">C#</div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">C++</div>
+                        <div class="skill-item">HTML/CSS</div>
+                        <div class="skill-item">SQL</div>
+                    </div>
                 </div>
 
                 <div class="skill-category">
                     <h3 class="skill-category-title">Game Development</h3>
-                    <ul>
-                        <li>Unity Engine</li>
-                        <li>Procedural Generation</li>
-                        <li>AI Pathfinding</li>
-                        <li>Physics Simulation</li>
-                        <li>Pixel Art (Aseprite)</li>
-                    </ul>
+                    <div class="skill-item-container">
+                        <div class="skill-item">Unity Engine</div>
+                        <div class="skill-item">Procedural Generation</div>
+                        <div class="skill-item">AI Pathfinding</div>
+                        <div class="skill-item">Physics Simulation</div>
+                        <div class="skill-item">Pixel Art (Aseprite)</div>
+                    </div>
                 </div>
 
                 <div class="skill-category">
                     <h3 class="skill-category-title">Web Development</h3>
-                    <ul>
-                        <li>MERN Stack</li>
-                        <li>REST APIs</li>
-                        <li>PostgreSQL</li>
-                        <li>Authentication Systems</li>
-                        <li>CI/CD Pipelines</li>
-                    </ul>
+                    <div class="skill-item-container">
+                        <div class="skill-item">MERN Stack</div>
+                        <div class="skill-item">REST APIs</div>
+                        <div class="skill-item">PostgreSQL</div>
+                        <div class="skill-item">Authentication Systems</div>
+                        <div class="skill-item">CI/CD Pipelines</div>
+                    </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Additional Skills</h3>
-                    <ul>
-                        <li>Agile/Scrum Methodology</li>
-                        <li>Git Version Control</li>
-                        <li>Cybersecurity (MITRE ATT&CK)</li>
-                        <li>Wireshark</li>
-                    </ul>
+                    <h3 class="skill-category-title">Other Skills</h3>
+                    <div class="skill-item-container">
+                        <div class="skill-item">Agile/Scrum</div>
+                        <div class="skill-item">Git</div>
+                        <div class="skill-item">Cybersecurity (MITRE ATT&CK)</div>
+                        <div class="skill-item">Wireshark</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -206,21 +234,24 @@
     <!-- Experience Section -->
     <section id="experience" class="experience-section section">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Sales Assistant (Watch Advisor)</h3>
-                        <p class="experience-meta">F.Hinds | December 2018 – December 2024</p>
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline-container">
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">Sales Assistant (Watch Advisor)</h3>
+                        <p class="timeline-date">December 2018 – December 2024</p>
                     </div>
-                    <ul>
-                        <li>Leveraged excellent team and intranet communication skills to facilitate smooth sales operations and inter-departmental collaboration.</li>
-                        <li>Completed targeted training in advanced product knowledge and sales techniques, positioning myself as the primary contact for high-value time-piece sales.</li>
-                        <li>Spearheaded targeted time-piece promotion initiatives during the holiday season, achieving and exceeding sales targets over a three-month period, and earning 
-                            recognition for meeting incentive milestones.</li>
-                        <li>Managed high-value transactions and customer data with a focus on security and precision.</li>
-                        
-                    </ul>
+                    <div class="timeline-content">
+                        <p class="timeline-subtitle">F.Hinds</p>
+                        <ul>
+                            <li>Leveraged excellent team and intranet communication skills to facilitate smooth sales operations and inter-departmental collaboration.</li>
+                            <li>Completed targeted training in advanced product knowledge and sales techniques, positioning myself as the primary contact for high-value time-piece sales.</li>
+                            <li>Spearheaded targeted time-piece promotion initiatives during the holiday season, achieving and exceeding sales targets over a three-month period, and earning
+                                recognition for meeting incentive milestones.</li>
+                            <li>Managed high-value transactions and customer data with a focus on security and precision.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -230,30 +261,19 @@
     <section id="education" class="education-section section">
         <div class="container">
             <h2 class="section-title">Education</h2>
-            <div class="education-card">
-                <div class="education-header">
-                    <h3 class="education-title">BSc Computer Science (Digital Media and Games)</h3>
-                    <p class="education-meta">Brunel University London | September 2021 – June 2024</p>
-                    <p class="education-degree">2.1 Second Class Honours (Upper Division)</p>
-                </div>
-                <div class="education-details">
-                    <p><strong>Thesis:</strong> <em>The Value of Education in Video Games</em> – Developed <em>Hello World</em>, a hacking-themed educational game, and conducted playtests with 10 participants to measure efficacy.</p>
-                    <p><strong>Specializations:</strong> Cybersecurity, AI, Digital Media and Games.</p>
-                    <p><strong>Key Projects:</strong> Led agile group projects, including a mental health tracking web app (MERN stack) and an in-flight restaurant system (Java Swing).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications-section section">
-        <div class="container">
-            <h2 class="section-title">Certifications & Achievements</h2>
-            <div class="certifications-grid">
-                <div class="certification-card">
-                    <i class="fas fa-award certification-icon"></i>
-                    <h3 class="certification-title">HackerRank</h3>
-                    <p>Java (Gold), C++ (Bronze)</p>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">BSc Computer Science (Digital Media and Games)</h3>
+                        <p class="timeline-date">September 2021 – June 2024</p>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="timeline-subtitle">Brunel University London</p>
+                        <p><strong>Grade:</strong> 2.1 Second Class Honours (Upper Division)</p>
+                        <p><strong>Thesis:</strong> <em>The Value of Education in Video Games</em> – Developed <em>Hello World</em>, a hacking-themed educational game, and conducted playtests with 10 participants to measure efficacy.</p>
+                        <p><strong>Specializations:</strong> Cybersecurity, AI, Digital Media and Games.</p>
+                        <p><strong>Key Projects:</strong> Led agile group projects, including a mental health tracking web app (MERN stack) and an in-flight restaurant system (Java Swing).</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -262,22 +282,52 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section section">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <ul class="social-links-container">
-                <li><a href="https://github.com/Ferngrowl" class="social-link" aria-label="GitHub Profile"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="social-link" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://ferngrowl.itch.io/" class="social-link" aria-label="Itch.io Profile"><i class="fas fa-gamepad"></i></a></li>
-            </ul>
-            <p class="contact-info">
-                Currently open to opportunities in Finland, England and remote positions<br>
-                <i class="fas fa-envelope"></i> harveysutton09@gmail.com
-            </p>
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-container">
+                
+                <div class="contact-method">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <h3 class="contact-title">Email</h3>
+                    <p class="contact-info">harveysutton09@gmail.com</p>
+                    <a href="mailto:harveysutton09@gmail.com" class="contact-link">Send Email</a>
+                </div>
+
+                <p class="contact-availability">
+                    Open to opportunities in Finland, England, and remote positions.
+                </p>
+
+                <div class="contact-method">
+                    <i class="fab fa-linkedin contact-icon"></i>
+                    <h3 class="contact-title">LinkedIn</h3>
+                    <p class="contact-info">linkedin.com/in/harveysuttoncompsci/</p>
+                    <a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="contact-link" target="_blank" rel="noopener noreferrer">View Profile</a>
+                </div>
+
+                <div class="contact-method">
+                    <i class="fab fa-github contact-icon"></i>
+                    <h3 class="contact-title">GitHub</h3>
+                    <p class="contact-info">github.com/Ferngrowl</p>
+                    <a href="https://github.com/Ferngrowl" class="contact-link" target="_blank" rel="noopener noreferrer">View Profile</a>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-gamepad contact-icon"></i>
+                    <h3 class="contact-title">Itch.io</h3>
+                    <p class="contact-info">ferngrowl.itch.io</p>
+                    <a href="https://ferngrowl.itch.io/" class="contact-link" target="_blank" rel="noopener noreferrer">View Profile</a>
+                </div>
+            </div>
             <div class="interests">
                 <h3>Interests</h3>
                 <p>Generative AI, 3D Modeling, Game Design, Blockchain</p>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="container footer-content">
+            
+        </div>
+    </footer>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
