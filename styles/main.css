@@ -215,7 +215,7 @@ a:focus, button:focus {
 
 /* Hero section */
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero-background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/images/hero/background.jpg');
     background-size: cover;
     background-position: center;
     color: white;
