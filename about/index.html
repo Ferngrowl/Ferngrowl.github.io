@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Harvey Sutton - Software Developer">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>About - Harvey Sutton</title>
+    <script>
+        // Immediately set theme before page loads
+        (function() {
+            const theme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+          <path d="M18 15l-6-6-6 6"></path>
+        </svg>
+    </button>
+    
+    <nav class="navigation-bar" aria-label="Main navigation">
+        <div class="container navigation-container">
+            <a href="../index.html" class="logo">Harvey Sutton</a>
+            <ul class="navigation-links">
+                <li><a href="../index.html" class="navigation-link">Home</a></li>
+                <li><a href="index.html" class="navigation-link active">About</a></li>
+                <li><a href="../projects/index.html" class="navigation-link">Projects</a></li>
+                <li><a href="../contact/index.html" class="navigation-link">Contact</a></li>
+            </ul>
+            
+            <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                <span class="icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                  </svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- About Me Section -->
+    <section id="about-content" class="section">
+        <div class="container">
+            <h1 class="section-title">About Me</h1>
+            <div class="about-container-detailed">
+                <div class="about-image-container">
+                    <img src="../assets/images/Profile.jpeg" alt="Harvey Sutton" class="profile-picture-large reveal">
+                </div>
+                <div class="about-text-detailed">
+                    <p>Spearheaded teams in agile environments as Scrum Master, coordinating agile sprint planning, backlog grooming, and stand-ups to ensure seamless integration of front-end and back-end components and timely delivery.</p>
+                    <p>Optimized critical components and built robust features from scratch, demonstrating proficiency in languages such as Java, C/C++, and Python while managing ambiguity in fast-paced projects.</p>
+                    <p>Committed to continuous learning and implementing cutting-edge technology that transforms ideas into industry-defining products, consistently exceeding project milestones and performance targets.</p>
+                    <p>Graduated with a BSc in Computer Science (Digital Media and Games) from Brunel University London (2:1). My final year specializations included Digital Media and Games, Cybersecurity, and AI. My thesis, "The Value of Education in Video Games," involved developing "Hello World," a hacking-themed educational game, and conducting playtests to measure its efficacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section">
+        <div class="container">
+            <h2 class="section-title">My Skillset</h2>
+            <div class="skills-grid">
+                <div class="skill-category full-width-skill">
+                    <h3 class="skill-category-title"><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-item-container">
+                        <span class="skill-item">C#</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">C++</span>
+                        <span class="skill-item">C</span>
+                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category full-width-skill">
+                    <h3 class="skill-category-title"><i class="fas fa-tools"></i> Tools & Frameworks</h3>
+                    <div class="skill-item-container">
+                        <span class="skill-item">Unity</span>
+                        <span class="skill-item">Git & GitHub</span>
+                        <span class="skill-item">VS Code</span>
+                        <span class="skill-item">Visual Studio</span>
+                        <span class="skill-item">Eclipse</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Express.js</span>
+                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item">Tailwind CSS</span>
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">Aseprite</span>
+                        <span class="skill-item">Wireshark</span>
+                        <span class="skill-item">Microsoft Office</span>
+                        <span class="skill-item">Capcut</span>
+                    </div>
+                </div>
+
+                <div class="skill-category full-width-skill">
+                    <h3 class="skill-category-title"><i class="fas fa-cogs"></i> Additional Skills & Methodologies</h3>
+                    <div class="skill-item-container">
+                        <span class="skill-item">Agile/Scrum</span>
+                        <span class="skill-item">CI/CD Pipelines</span>
+                        <span class="skill-item">REST APIs</span>
+                        <span class="skill-item">Pixel Art</span>
+                        <span class="skill-item">Cybersecurity (MITRE ATT&CK)</span>
+                        <span class="skill-item">Web Development (MERN Stack)</span>
+                        <span class="skill-item">LeetCode Problem Solving (C#)</span>
+                        <span class="skill-item">Object-Oriented Programming (OOP)</span>
+                        <span class="skill-item">Data Structures & Algorithms</span>
+                        <span class="skill-item">Game Design & Mechanics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Interests Section -->
+    <section id="interests" class="section">
+        <div class="container">
+            <h2 class="section-title">Interests</h2>
+            <div class="interests-container">
+                <span class="skill-item">Generative AI</span>
+                <span class="skill-item">Game Development</span>
+                <span class="skill-item">3D Modelling</span>
+                <span class="skill-item">Pixel Art</span>
+                <span class="skill-item">Blockchain</span>
+                <span class="skill-item">Cryptography</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content-row">
+            <div class="footer-left">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Harvey Sutton. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://github.com/Ferngrowl" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://ferngrowl.itch.io" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Itch.io">
+                        <i class="fas fa-gamepad"></i>
+                    </a>
+                    <a href="mailto:harveysutton09@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html> 

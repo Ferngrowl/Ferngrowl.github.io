@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Harvey Sutton, a software developer specializing in game development and web applications. Let's connect and discuss your project or ideas.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Contact - Harvey Sutton</title>
+    <script>
+        // Immediately set theme before page loads
+        (function() {
+            const theme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <button class="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
+          <path d="M18 15l-6-6-6 6"></path>
+        </svg>
+    </button>
+    
+    <nav class="navigation-bar" aria-label="Main navigation">
+        <div class="container navigation-container">
+            <a href="../index.html" class="logo">Harvey Sutton</a>
+            <ul class="navigation-links">
+                <li><a href="../index.html" class="navigation-link">Home</a></li>
+                <li><a href="../about/index.html" class="navigation-link">About</a></li>
+                <li><a href="../projects/index.html" class="navigation-link">Projects</a></li>
+                <li><a href="index.html" class="navigation-link active">Contact</a></li>
+            </ul>
+            
+            <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                <span class="icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                  </svg>
+                </span>
+            </button>
+        </div>
+    </nav>
+    
+    <main>
+        <section class="contact-section section">
+            <div class="container">
+                <h1 class="section-title">Get in Touch</h1>
+                <p class="lead text-center" style="margin-bottom: 2rem;">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question or just want to say hi, feel free to reach out through any of the platforms below or use the contact form.</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2 class="contact-section-subtitle">Let's Connect</h2>
+                        <p>Find me on your favorite platform, or send me an email directly.</p>
+                        <div class="social-cards">
+                            <div class="social-card">
+                                <div class="social-icon"><i class="fab fa-github"></i></div>
+                                <a href="https://github.com/Ferngrowl" class="btn btn-primary social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a>
+                            </div>
+                            <div class="social-card">
+                                <div class="social-icon"><i class="fab fa-linkedin"></i></div>
+                                <a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="btn btn-primary social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
+                            </div>
+                            <div class="social-card">
+                                <div class="social-icon"><i class="fas fa-gamepad"></i></div>
+                                <a href="https://ferngrowl.itch.io" class="btn btn-primary social-btn" target="_blank" rel="noopener noreferrer" aria-label="Itch.io Profile">Itch.io</a>
+                            </div>
+                            <div class="social-card">
+                                <div class="social-icon"><i class="fas fa-envelope"></i></div>
+                                <a href="mailto:harveysutton09@gmail.com" class="btn btn-primary social-btn" aria-label="Email Harvey Sutton">Email Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <h2 class="contact-section-subtitle text-center">Send Me a Message</h2>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="e.g., Jane Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="e.g., jane.doe@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="e.g., Project Collaboration" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="8" placeholder="Hi Harvey, I'd like to discuss..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content-row">
+            <div class="footer-left">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Harvey Sutton. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://github.com/Ferngrowl" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://ferngrowl.itch.io" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Itch.io">
+                        <i class="fas fa-gamepad"></i>
+                    </a>
+                    <a href="mailto:harveysutton09@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html> 

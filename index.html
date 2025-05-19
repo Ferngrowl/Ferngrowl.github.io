@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Harvey Sutton - Software Developer specializing in game development and web applications">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Harvey Sutton | Software Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
@@ -21,13 +24,12 @@
     
     <nav class="navigation-bar" aria-label="Main navigation">
         <div class="container navigation-container">
-            <a href="#" class="logo">H.SUTTON</a>
+            <a href="index.html" class="logo">Harvey Sutton</a>
             <ul class="navigation-links">
-                <li><a href="#about" class="navigation-link">About</a></li>
-                <li><a href="#projects" class="navigation-link">Projects</a></li>
-                <li><a href="#skills" class="navigation-link">Skills</a></li>
-                <li><a href="#experience" class="navigation-link">Experience</a></li>
-                <li><a href="#contact" class="navigation-link">Contact</a></li>
+                <li><a href="index.html" class="navigation-link active">Home</a></li>
+                <li><a href="about/index.html" class="navigation-link">About</a></li>
+                <li><a href="projects/index.html" class="navigation-link">Projects</a></li>
+                <li><a href="contact/index.html" class="navigation-link">Contact</a></li>
             </ul>
             
             <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
@@ -42,296 +44,139 @@
     
     <!-- Hero Section -->
     <section class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="container hero-container">
             <div class="hero-content">
+                <div class="profile-image-container">
+                    <img src="assets/images/Profile.jpeg" alt="Harvey Sutton" class="profile-picture-hero">
+                </div>
                 <h1 class="hero-title">Harvey Sutton</h1>
-                <p class="hero-subtitle">Software Developer | Game Development | Cybersecurity | Web Applications</p>
-                <p class="hero-description">Passionate about creating innovative and engaging software solutions.</p>
+                <p class="hero-subtitle">Tech Lead | Programmer | Unity Developer</p>
+                <p class="hero-description">Passionate about engineering scalable software solutions and creating innovative, industry-defining products. Specializing in game development, web applications, and cybersecurity.</p>
                 <div class="skill-badges">
-                    <span class="skill-badge">Unity</span>
-                    <span class="skill-badge">C#</span>
-                    <span class="skill-badge">React</span>
-                    <span class="skill-badge">Node.js</span>
-                    <span class="skill-badge">Cybersecurity</span>
+                    <span class="skill-badge">Unity & C#</span>
+                    <span class="skill-badge">Java</span>
                     <span class="skill-badge">Python</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">React & Node.js</span>
+                    <span class="skill-badge">Cybersecurity</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section section">
-        <div class="container">
+    <section id="home-about" class="section">
+        <div class="container text-center">
             <h2 class="section-title">About Me</h2>
-            <div class="about-container">
-                <div class="about-content">
-                    <p>I am a Computer Science graduate with a passion for software development, specializing in game development, cybersecurity, and full-stack web applications.  My skills include rapid prototyping, modular coding, and agile project management.  I am driven to create immersive, educational, and secure digital experiences.</p>
-                    <p>I am highly proficient in Unity C#, Java, and web development languages. </p>
-                </div>
-            </div>
+            <p class="lead home-about-text">Engineered scalable software solutions by leveraging advanced knowledge in computer science fundamentals including algorithm design, data structures, and complexity analysis. Spearheaded teams in agile environments as Scrum Master, demonstrating proficiency in languages such as Java, C/C++, and Python. Committed to continuous learning and implementing cutting-edge technology.</p>
+            <a href="about/index.html" class="btn btn-primary btn-lg">Learn More About Me</a>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section section">
+    <!-- Featured Projects Section -->
+    <section id="home-projects" class="projects-section section">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="project-carousel-wrapper">
-                <div class="project-carousel">
-                    <!-- Polterheist Project -->
-                    <div class="project-card">
-                        <div class="project-card-image">
-                            <iframe
-                                    class="game-embed-iframe"
-                                    src="https://itch.io/embed/3258807?"
-                                    title="Polterheist Game Embed"
-                                    loading="lazy"
-                            >
-                                <a href="https://ferngrowl.itch.io/polterheist">Polterheist by Ferngrowl</a>
-                            </iframe>
-                        </div>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-vertical"> 
+                <!-- Polterheist Project -->
+                <div class="project-card">
+                    <div class="project-card-inner">
                         <div class="project-card-content">
                             <div class="project-card-header">
-                                <h3 class="project-card-title">Polterheist</h3>
-                                <p class="project-card-subtitle">Ghost puzzle adventure game with possession mechanics</p>
+                                <h3 class="project-card-title">Polterheist: 2D Puzzle Game</h3>
+                                <p class="project-card-subtitle">Unity | C# | Pirate Software Game Jam</p>
                             </div>
-                            <p class="project-card-description">Designed a browser-based puzzle game with a possession mechanic for the Pirate Software Game Jam 2025. Built using Unity with modular code, dynamic audio, and polished pixel art.</p>
-                            <div class="project-card-meta">
-                                <span>Role: Solo Developer</span>
+                            <p class="project-card-description">Orchestrated the solo development of a 2D puzzle game featuring a unique possession mechanic. Achieved over 50 views in the first week, garnering positive feedback for mechanics and artistic style. Authored an extensive design document detailing gameplay mechanics and ideation.</p>
+                            <div class="project-metrics">
+                                <div class="metric"><i class="fas fa-clock"></i><span>Jan 2025</span></div>
+                                <div class="metric"><i class="fas fa-users"></i><span>Solo Dev</span></div>
+                                <div class="metric"><i class="fas fa-eye"></i><span>50+ Views</span></div>
                             </div>
-                            <div class="tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">Puzzle</span>
-                                <span class="tag">C#</span>
+                            <div class="project-card-links">
+                                <a href="https://ferngrowl.itch.io/polterheist" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-gamepad"></i> Play Game</a>
+                                <a href="projects/index.html#polterheist" class="btn btn-primary">View Details</a> 
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Hello World Project -->
-                    <div class="project-card">
-                        <div class="project-card-image">
-                            <iframe
-                                    class="game-embed-iframe"
-                                    src="https://itch.io/embed/3335073?"
-                                    title="Hello World Game Embed"
-                            >
-                                <a href="https://ferngrowl.itch.io/hello-world">Hello World by Ferngrowl</a>
-                            </iframe>
-                        </div>
+                <!-- Hello World Project -->
+                <div class="project-card">
+                    <div class="project-card-inner">
                         <div class="project-card-content">
                             <div class="project-card-header">
-                                <h3 class="project-card-title">Hello World</h3>
-                                <p class="project-card-subtitle">Educational CLI simulator for programming and cybersecurity</p>
+                                <h3 class="project-card-title">Hello World: Educational Hacking Game</h3>
+                                <p class="project-card-subtitle">Unity | C# | Final Year Project</p>
                             </div>
-                            <p class="project-card-description">Created a Unity-based CLI simulator to teach programming and cybersecurity concepts for my final year project. Conducted playtests using the PXI model, demonstrating improvement in user comprehension.</p>
-                            <div class="project-card-meta">
-                                <span>Role: Lead Developer & Researcher</span>
+                            <p class="project-card-description">Developed a hacking-themed serious game to teach basic programming concepts. Designed a simulated CLI for navigating procedurally generated file systems and implemented cybersecurity puzzles like password cracking. Conducted playtests with 10 participants, evaluated using the PXI model.</p>
+                             <div class="project-metrics">
+                                <div class="metric"><i class="fas fa-clock"></i><span>Oct 2023 - Mar 2024</span></div>
+                                <div class="metric"><i class="fas fa-users"></i><span>Solo Dev</span></div>
+                                <div class="metric"><i class="fas fa-graduation-cap"></i><span>Thesis Project</span></div>
                             </div>
-                            <div class="tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">Educational</span>
-                                <span class="tag">Cybersecurity</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- HelpInNeed Project -->
-                    <div class="project-card">
-                        <div class="project-card-image">
-                            <iframe
-                                    class="game-embed-iframe"
-                                    title="HelpInNeed Project"
-                            >
-                                <a href="https://ferngrowl.itch.io/platformer">HelpInNeed by Ferngrowl</a>
-                            </iframe>
-                        </div>
-                        <div class="project-card-content">
-                            <div class="project-card-header">
-                                <h3 class="project-card-title">HelpInNeed</h3>
-                                <p class="project-card-subtitle">Mental Health Tracker Web Application</p>
-                            </div>
-                            <p class="project-card-description">Led a 5-member team to build a MERN stack app for UN SDG 3 (Good Health) as a university group project. Implemented goal-tracking features, integrating React frontend with MongoDB backend.</p>
-                            <div class="project-card-meta">
-                                <span>Role: Full-Stack Developer & Scrum Master</span>
-                            </div>
-                            <div class="tags">
-                                <span class="tag">MERN</span>
-                                <span class="tag">React</span>
-                                <span class="tag">MongoDB</span>
+                            <div class="project-card-links">
+                                <a href="https://ferngrowl.itch.io/hello-world" class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i class="fas fa-gamepad"></i> Play Game</a>
+                                <a href="projects/index.html#hello-world" class="btn btn-primary">View Details</a> 
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-navigation">
-                <button class="carousel-button carousel-prev" aria-label="Previous Project">
-                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
-                    <path d="M15 18l-6-6 6-6"></path>
-                  </svg>
-                </button>
-                <button class="carousel-button carousel-next" aria-label="Next Project">
-                  <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none">
-                    <path d="M9 18l6-6-6-6"></path>
-                  </svg>
-                </button>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section section">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Programming Languages</h3>
-                    <div class="skill-item-container">
-                        <div class="skill-item">C#</div>
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">Java</div>
-                        <div class="skill-item">JavaScript</div>
-                        <div class="skill-item">C++</div>
-                        <div class="skill-item">HTML/CSS</div>
-                        <div class="skill-item">SQL</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Game Development</h3>
-                    <div class="skill-item-container">
-                        <div class="skill-item">Unity Engine</div>
-                        <div class="skill-item">Procedural Generation</div>
-                        <div class="skill-item">AI Pathfinding</div>
-                        <div class="skill-item">Physics Simulation</div>
-                        <div class="skill-item">Pixel Art (Aseprite)</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Web Development</h3>
-                    <div class="skill-item-container">
-                        <div class="skill-item">MERN Stack</div>
-                        <div class="skill-item">REST APIs</div>
-                        <div class="skill-item">PostgreSQL</div>
-                        <div class="skill-item">Authentication Systems</div>
-                        <div class="skill-item">CI/CD Pipelines</div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3 class="skill-category-title">Other Skills</h3>
-                    <div class="skill-item-container">
-                        <div class="skill-item">Agile/Scrum</div>
-                        <div class="skill-item">Git</div>
-                        <div class="skill-item">Cybersecurity (MITRE ATT&CK)</div>
-                        <div class="skill-item">Wireshark</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section section">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline-container">
-
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">Sales Assistant (Watch Advisor)</h3>
-                        <p class="timeline-date">December 2018 – December 2024</p>
-                    </div>
-                    <div class="timeline-content">
-                        <p class="timeline-subtitle">F.Hinds</p>
-                        <ul>
-                            <li>Leveraged excellent team and intranet communication skills to facilitate smooth sales operations and inter-departmental collaboration.</li>
-                            <li>Completed targeted training in advanced product knowledge and sales techniques, positioning myself as the primary contact for high-value time-piece sales.</li>
-                            <li>Spearheaded targeted time-piece promotion initiatives during the holiday season, achieving and exceeding sales targets over a three-month period, and earning
-                                recognition for meeting incentive milestones.</li>
-                            <li>Managed high-value transactions and customer data with a focus on security and precision.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education-section section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline-container">
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <h3 class="timeline-title">BSc Computer Science (Digital Media and Games)</h3>
-                        <p class="timeline-date">September 2021 – June 2024</p>
-                    </div>
-                    <div class="timeline-content">
-                        <p class="timeline-subtitle">Brunel University London</p>
-                        <p><strong>Grade:</strong> 2.1 Second Class Honours (Upper Division)</p>
-                        <p><strong>Thesis:</strong> <em>The Value of Education in Video Games</em> – Developed <em>Hello World</em>, a hacking-themed educational game, and conducted playtests with 10 participants to measure efficacy.</p>
-                        <p><strong>Specializations:</strong> Cybersecurity, AI, Digital Media and Games.</p>
-                        <p><strong>Key Projects:</strong> Led agile group projects, including a mental health tracking web app (MERN stack) and an in-flight restaurant system (Java Swing).</p>
-                    </div>
-                </div>
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="projects/index.html" class="btn btn-primary btn-lg">View All Projects</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section section">
+    <section id="home-contact-cta" class="section text-center">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-container">
-                
-                <div class="contact-method">
-                    <i class="fas fa-envelope contact-icon"></i>
-                    <h3 class="contact-title">Email</h3>
-                    <p class="contact-info">harveysutton09@gmail.com</p>
-                    <a href="mailto:harveysutton09@gmail.com" class="contact-link">Send Email</a>
-                </div>
-
-                <div class="contact-method">
-                    <i class="fab fa-linkedin contact-icon"></i>
-                    <h3 class="contact-title">LinkedIn</h3>
-                    <p class="contact-info">linkedin.com/in/harveysuttoncompsci/</p>
-                    <a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="contact-link" target="_blank" rel="noopener noreferrer">View Profile</a>
-                </div>
-
-                <div class="contact-method">
-                    <i class="fab fa-github contact-icon"></i>
-                    <h3 class="contact-title">GitHub</h3>
-                    <p class="contact-info">github.com/Ferngrowl</p>
-                    <a href="https://github.com/Ferngrowl" class="contact-link" target="_blank" rel="noopener noreferrer">View Profile</a>
-                </div>
-                <div class="contact-method">
-                    <i class="fas fa-gamepad contact-icon"></i>
-                    <h3 class="contact-title">Itch.io</h3>
-                    <p class="contact-info">ferngrowl.itch.io</p>
-                    <a href="https://ferngrowl.itch.io/" class="contact-link" target="_blank" rel="noopener noreferrer">View Profile</a>
-                </div>
-
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="lead">Ready to collaborate, discuss a project, or just say hello? I'd love to hear from you.</p>
+            <div class="social-links">
+                <a href="https://github.com/Ferngrowl" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://ferngrowl.itch.io" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Itch.io Profile">
+                    <i class="fas fa-gamepad"></i>
+                </a>
+                <a href="mailto:harveysutton09@gmail.com" class="social-link" aria-label="Email Harvey Sutton">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
-            
-            <p class="contact-availability">
-                Open to opportunities in Finland, England, and remote positions.
-            </p>
-
-            <div class="interests">
-                <h3>Interests</h3>
-                <p>Generative AI, 3D Modeling, Game Design, Blockchain</p>
-            </div>
+            <a href="contact/index.html" class="btn btn-primary btn-lg">Contact Me</a>
         </div>
     </section>
 
     <footer>
-        <div class="container footer-content">
-            
+        <div class="container footer-content-row">
+            <div class="footer-left">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Harvey Sutton. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://github.com/Ferngrowl" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/harveysuttoncompsci/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://ferngrowl.itch.io" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Itch.io">
+                        <i class="fas fa-gamepad"></i>
+                    </a>
+                    <a href="mailto:harveysutton09@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script src="scripts/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
