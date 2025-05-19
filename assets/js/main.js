@@ -96,35 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const initForms = () => {
         const contactForm = document.getElementById('contactForm');
         if (contactForm) {
-            contactForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
+            contactForm.addEventListener('submit', function(e) {
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
                 
-                const formData = new FormData(contactForm);
-                const data = Object.fromEntries(formData.entries());
-                
-                try {
-                    // Here you would typically send the data to your backend
-                    console.log('Form data:', data);
-                    
-                    // Show success message
-                    const submitButton = contactForm.querySelector('button[type="submit"]');
-                    const originalText = submitButton.innerHTML;
-                    submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                    submitButton.disabled = true;
-                    
-                    // Reset form
-                    contactForm.reset();
-                    
-                    // Reset button after 3 seconds
-                    setTimeout(() => {
-                        submitButton.innerHTML = originalText;
-                        submitButton.disabled = false;
-                    }, 3000);
-                    
-                } catch (error) {
-                    console.error('Error sending message:', error);
-                    alert('There was an error sending your message. Please try again.');
-                }
+                // Let the form submit naturally to Formsubmit
+                // Formsubmit will handle the redirect
             });
         }
     };
