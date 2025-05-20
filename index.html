@@ -25,14 +25,35 @@
     <nav class="navigation-bar" aria-label="Main navigation">
         <div class="container navigation-container">
             <a href="index.html" class="logo">Harvey Sutton</a>
-            <ul class="navigation-links">
+            
+            <!-- Hamburger Menu Button (for mobile) -->
+            <button class="mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navigation-links-ul">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <ul class="navigation-links" id="navigation-links-ul">
                 <li><a href="index.html" class="navigation-link active">Home</a></li>
                 <li><a href="about/index.html" class="navigation-link">About</a></li>
                 <li><a href="projects/index.html" class="navigation-link">Projects</a></li>
                 <li><a href="contact/index.html" class="navigation-link">Contact</a></li>
+                <!-- Dark Mode Toggle moved inside the navigation links for mobile menu -->
+                <li class="dark-mode-toggle-li">
+                    <button id="darkModeToggleMobile" class="dark-mode-toggle theme-toggle-button" aria-label="Toggle dark mode">
+                        <span class="icon">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                          </svg>
+                        </span>
+                    </button>
+                </li>
             </ul>
             
-            <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+            <!-- Desktop Dark Mode Toggle -->
+            <button id="darkModeToggleDesktop" class="dark-mode-toggle theme-toggle-button" aria-label="Toggle dark mode">
                 <span class="icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>

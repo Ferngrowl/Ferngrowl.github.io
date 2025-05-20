@@ -309,7 +309,22 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1001;
 }
+
+.dark-mode-toggle .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-toggle .icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+}
+
 .dark-mode-toggle:hover {
     background-color: var(--hover-color);
     border-color: var(--border-color);
@@ -317,6 +332,31 @@ ul {
 .dark-mode-toggle:focus {
     outline: none;
     box-shadow: var(--focus-ring);
+}
+
+/* MOVED HERE: Styles for the mobile menu toggle (hamburger button) */
+.mobile-menu-toggle {
+    display: none; /* Hidden by default, shown in media query */
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1005; /* Above nav bar, below open menu */
+}
+
+.mobile-menu-toggle svg {
+    width: 28px;
+    height: 28px;
+    stroke-width: 2;
+    pointer-events: none; /* ADDED: Prevents SVG from capturing clicks */
+}
+
+/* MOVED HERE: Styling for the dark mode toggle when it's an LI element in the nav */
+.navigation-links .dark-mode-toggle-li {
+    display: none; /* Hidden by default (for desktop), shown in mobile media query */
+    justify-content: center; /* Center it in the mobile menu */
+    padding: 0.5rem 0; /* Add some padding */
 }
 
 /* Hero Section */
@@ -822,7 +862,7 @@ footer {
 @media (max-width: 768px) { /* Small devices (landscape phones, 768px and down) */
     body {
         font-size: 15px;
-        padding-top: calc(var(--header-height) - 10px); /* Adjust for smaller header */
+        padding-top: var(--header-height);
     }
     :root {
         --header-height: 60px;
@@ -838,38 +878,61 @@ footer {
         font-size: 2.25rem;
     }
     .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
-    .navigation-links {
-        position: fixed;
-        top: var(--header-height);
-        left: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: calc(100vh - var(--header-height));
-        flex-direction: column;
-        background: var(--nav-background);
-        padding: 1.5rem;
-        transition: left 0.35s ease-in-out;
-        box-shadow: 5px 0px 15px rgba(0,0,0,0.1);
-        gap: 0.5rem;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    .navigation-links.active {
-        left: 0;
-    }
-    .navigation-link {
-        padding: 0.75rem 0.5rem;
-        width: 100%;
-    }
-    .navigation-link::after {
-        bottom: 0.25rem;
-    }
+
+    /* Mobile Navigation Styles */
     .mobile-menu-toggle {
-        display: block; /* Should be in JS, but ensure it's visible if not */
-        z-index: 1001;
+        display: block; /* Show hamburger button */
     }
+
+    .navigation-links {
+        display: none; /* Hide nav links by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: var(--header-height); /* Position below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: var(--nav-background);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 1rem 0;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .navigation-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .navigation-link {
+        padding: 0.8rem 1.5rem;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .navigation-link:last-child {
+        border-bottom: none;
+    }
+
+    .navigation-link::after {
+        display: none; /* Hide underline animation on mobile */
+    }
+
+    /* Ensure dark mode toggle inside mobile menu is visible and styled */
+    .navigation-links .dark-mode-toggle-li {
+        display: flex; /* Show LI in mobile menu. Was: border-top: 1px solid var(--border-color); */
+        border-top: 1px solid var(--border-color); /* Keep the separator */
+        width: 100%; /* Make it full width if it is to be a block item */
+    }
+
+    #darkModeToggleMobile {
+        margin: 0.5rem auto; /* Center button if it's a block */
+    }
+
+    /* Hide the dedicated desktop dark mode toggle on mobile */
+    #darkModeToggleDesktop {
+        display: none !important; /* Make this rule more forceful */
+    }
+
     .contact-content {
         flex-direction: column;
         align-items: stretch;
@@ -937,4 +1000,11 @@ img {
     height: auto;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure desktop toggle is visible by default if it's not the one in the LI */
+#darkModeToggleDesktop {
+    display: flex; /* Or inline-flex, adjust as needed for alignment */
+    align-items: center;
+    justify-content: center;
 }
